@@ -7,7 +7,7 @@ from PIL import Image
 from output import output
 
 #driver = webdriver.Firefox(executable_path=r'C:\Users\RACH0_000\Downloads\geckodriver\geckodriver.exe') #do not delete geckodriver from downloads
-driver = webdriver.Chrome(executable_path=r'C:\Users\RACH0_000\Downloads\chromedriver\chromedriver.exe')
+driver = webdriver.Chrome()
 driver.set_window_position(0, 0)
 driver.set_window_size(300, 300) #resize the window here before starting the game, this will also save tons of time while capturing screenshot
 driver.get("https://dry-anchorage-61733.herokuapp.com/")
