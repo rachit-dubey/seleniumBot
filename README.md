@@ -5,4 +5,7 @@ Installation insturctions
 
 First install selenium via pip install selenium
 
+Then for headless chrome - sudo apt-get install xvfb
+
 Then you will need to install chromedriver https://sites.google.com/a/chromium.org/chromedriver/downloads
+
