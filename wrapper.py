@@ -2,6 +2,7 @@ import numpy as np
 from core import base_environment
 from gym import spaces
 from output import output
+import Image
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -41,7 +42,13 @@ class GymWrapper(object):
     return output(0,actions,driver) #return the output when action is null or 0
 	#return self.env.observation()[self._obsKey]
 
-
+  def _render(self): #this guy can be empty
+    self.env.render()
+    
+  def render(self):
+    im = output(0,actions,driver)
+    im.show()
+	
   def _reset(self): #this guy can be empty
     self.env.reset()
     return self._observation()
