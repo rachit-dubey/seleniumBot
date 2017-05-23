@@ -42,7 +42,7 @@ class GymWrapper(object):
     return output(0,actions,driver) #return the output when action is null or 0
 	#return self.env.observation()[self._obsKey]
 
-  def _render(self): #this guy can be empty
+  def _render(self): #to display image
     self.env.render()
     
   def render(self):
