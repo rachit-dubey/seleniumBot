@@ -12,6 +12,7 @@ def output(action,actions,driver): #this is the function that should be called b
 	if action == 0:
 		screen = driver.get_screenshot_as_png()
 		img = Image.open(io.BytesIO(screen))
+		img = img.resize((42,42))
 		#img.save('screenie_'+str(count)+'.png')
 		#driver.save_screenshot('screenie_'+str(count)+'.png')
 	else:
@@ -19,7 +20,7 @@ def output(action,actions,driver): #this is the function that should be called b
 		#start_time = time.time()
 		screen = driver.get_screenshot_as_png()
 		img = Image.open(io.BytesIO(screen))
-		img = img.resize((84,84))
+		img = img.resize((42,42))
 		#img = img.resize((336,336))
 		#img.save('screenie_'+str(count)+'.png')
 		#driver.save_screenshot('screenie_'+str(count)+'.png')
