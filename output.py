@@ -16,13 +16,13 @@ def output(action,driver,action1,action2,action3,action4,count): #this is the fu
 		#img.save('screenie_'+str(count)+'.png')
 		#driver.save_screenshot('screenie_'+str(count)+'.png')
 	else:
-		#start_time = time.time()
+		start_time = time.time()
 		actionTake(action,action1,action2,action3,action4)
 		screen = driver.get_screenshot_as_png()
 		img = Image.open(io.BytesIO(screen))
 		img = img.resize((42,42))
 		#img.save('screenie_'+str(count)+'.png')
 		#driver.save_screenshot('screenie_'+str(count)+'.png')
-		#print("--- %s seconds ---" % (time.time() - start_time))
+		print("--- %s seconds ---" % (time.time() - start_time))
 
 	return img
