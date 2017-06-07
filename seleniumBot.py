@@ -25,7 +25,7 @@ t_end = time.time() + 10
 count = 0
 while time.time() < t_end:	
 	act = random.randint(1,4)
-	output(act,actions,driver)	
+	im = output(act,actions,driver)	
 	count = count+1
 	
 driver.close()
