@@ -8,7 +8,7 @@ from PIL import Image
 from actions import actionTake
 import time
 	
-def output(action,actions,driver): #this is the function that should be called by the wrapper. 
+def output(action,driver,action1,action2,action3,action4,count): #this is the function that should be called by the wrapper. 
 	if action == 0:
 		screen = driver.get_screenshot_as_png()
 		img = Image.open(io.BytesIO(screen))
@@ -16,12 +16,11 @@ def output(action,actions,driver): #this is the function that should be called b
 		#img.save('screenie_'+str(count)+'.png')
 		#driver.save_screenshot('screenie_'+str(count)+'.png')
 	else:
-		actionTake(action,actions)
 		#start_time = time.time()
+		actionTake(action,action1,action2,action3,action4)
 		screen = driver.get_screenshot_as_png()
 		img = Image.open(io.BytesIO(screen))
 		img = img.resize((42,42))
-		#img = img.resize((336,336))
 		#img.save('screenie_'+str(count)+'.png')
 		#driver.save_screenshot('screenie_'+str(count)+'.png')
 		#print("--- %s seconds ---" % (time.time() - start_time))
