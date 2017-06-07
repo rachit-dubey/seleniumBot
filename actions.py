@@ -1,26 +1,25 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-import time
 
-def up(actions):
-	actions.key_down(Keys.ARROW_UP).send_keys("n").key_up(Keys.ARROW_UP).perform()
+def up(action):
+	action.perform()
 
-def left(actions):
-	actions.key_down(Keys.ARROW_LEFT).send_keys("n").key_up(Keys.ARROW_LEFT).perform()
-
-def right(actions):
-	actions.key_down(Keys.ARROW_RIGHT).send_keys("n").key_up(Keys.ARROW_RIGHT).perform()
+def down(action):
+	action.perform()
 	
-def down(actions):
-	actions.key_down(Keys.ARROW_DOWN).send_keys("n").key_up(Keys.ARROW_DOWN).perform()
+def left(action):
+	action.perform()
+
+def right(action):
+	action.perform()
 	
-def actionTake(act,actions) :
+def actionTake(act,action1,action2,action3,action4) :
 	if act == 1:
-		up(actions)
+		up(action1)
 	elif act == 2:
-		down(actions)
+		down(action2)
 	elif act == 3:
-		left(actions)
+		left(action3)
 	elif act == 4:
-		right(actions)
+		right(action4)
